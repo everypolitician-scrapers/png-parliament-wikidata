@@ -6,5 +6,6 @@ de = WikiData::Category.new( 'Kategorie:Politiker (Papua-Neuguinea)', 'de').memb
 el = WikiData::Category.new( 'Κατηγορία:Πολιτικοί της Παπούα Νέας Γουινέας', 'el').member_titles
 es = WikiData::Category.new( 'Categoría:Políticos de Papúa Nueva Guinea', 'es').member_titles
 
-EveryPolitician::Wikidata.scrape_wikidata(names: { en: en, fr: fr, de: de, el: el, es: es }, output: false)
+pm = WikiData::Category.new( 'Category:Prime Ministers of Papua New Guinea', 'en').member_titles
 
+EveryPolitician::Wikidata.scrape_wikidata(names: { en: en | pm, fr: fr, de: de, el: el, es: es }, output: false)
